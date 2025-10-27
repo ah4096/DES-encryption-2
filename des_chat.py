@@ -51,7 +51,7 @@ def run_client():
             msg_sent = input(">>")
             encrypted_msg = run_des(msg_sent, KEY, 'encrypt')
             #encrypted_msg = msg_sent
-            print(f"Encrypted message sent: {encrypted_msg}")
+            print(f"Encrypted message sent: {encrypted_msg}\n")
             s.sendall(encrypted_msg.encode('utf-8'))
 
             msg_received = s.recv(1024).decode('utf-8')
